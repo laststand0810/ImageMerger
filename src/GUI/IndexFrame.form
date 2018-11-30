@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Form version="1.5" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
+  <NonVisualComponents>
+    <Component class="javax.swing.ButtonGroup" name="Direction_ButtonGroup">
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="Direction_ButtonGroup.add(Direction_Horizontal_Radio);&#xa;Direction_ButtonGroup.add(Direction_Vertical_Radio);&#xa;Direction_ButtonGroup.setSelected(Direction_Horizontal_Radio.getModel(), true);&#xa;Direction = PrintDirection.HORIZONTAL;"/>
+      </AuxValues>
+    </Component>
+    <Component class="javax.swing.JFileChooser" name="Read_FileChooser">
+      <Properties>
+        <Property name="currentDirectory" type="java.io.File" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="new java.io.File(&quot;/&quot;)" type="code"/>
+        </Property>
+        <Property name="dialogTitle" type="java.lang.String" value="Select image folder:"/>
+        <Property name="fileSelectionMode" type="int" value="1"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Read_FileChooserActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JFileChooser" name="Write_FileChooser">
+      <Properties>
+        <Property name="currentDirectory" type="java.io.File" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="new java.io.File(&quot;/&quot;)" type="code"/>
+        </Property>
+        <Property name="fileSelectionMode" type="int" value="1"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Write_FileChooserActionPerformed"/>
+      </Events>
+    </Component>
+  </NonVisualComponents>
+  <Properties>
+    <Property name="defaultCloseOperation" type="int" value="3"/>
+    <Property name="title" type="java.lang.String" value="Image Merger"/>
+    <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+      <Dimension value="[837, 249]"/>
+    </Property>
+    <Property name="resizable" type="boolean" value="false"/>
+  </Properties>
+  <SyntheticProperties>
+    <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
+    <SyntheticProperty name="generateCenter" type="boolean" value="false"/>
+  </SyntheticProperties>
+  <AuxValues>
+    <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_generateFQN" type="java.lang.Boolean" value="true"/>
+    <AuxValue name="FormSettings_generateMnemonicsCode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_i18nAutoMode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_layoutCodeTarget" type="java.lang.Integer" value="1"/>
+    <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
+  </AuxValues>
+
+  <Layout>
+    <DimensionLayout dim="0">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace min="-2" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="IO_Panel" max="32767" attributes="0"/>
+                  <Group type="102" attributes="0">
+                      <Component id="Mod_Panel" max="32767" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="Confirm_Button" pref="177" max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+              <EmptySpace min="-2" max="-2" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+    <DimensionLayout dim="1">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace min="-2" max="-2" attributes="0"/>
+              <Component id="IO_Panel" max="32767" attributes="0"/>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="Mod_Panel" max="32767" attributes="0"/>
+                  <Component id="Confirm_Button" max="32767" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+  </Layout>
+  <SubComponents>
+    <Container class="javax.swing.JPanel" name="IO_Panel">
+      <Properties>
+        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+          <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
+            <TitledBorder title="IO Directories">
+              <Color PropertyName="color" blue="b4" green="b4" red="c2" type="rgb"/>
+            </TitledBorder>
+          </Border>
+        </Property>
+      </Properties>
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" attributes="0">
+                  <EmptySpace min="-2" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                      <Component id="Write_Label" pref="261" max="32767" attributes="0"/>
+                      <Component id="Read_Label" max="32767" attributes="0"/>
+                  </Group>
+                  <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                      <Component id="Write_ComboBox" max="32767" attributes="0"/>
+                      <Component id="Read_ComboBox" pref="217" max="32767" attributes="0"/>
+                  </Group>
+                  <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="ReadDirectoryBrowse_Button" pref="226" max="32767" attributes="0"/>
+                      <Component id="WriteDirectoryBrowse_Button" max="32767" attributes="0"/>
+                  </Group>
+                  <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" attributes="0">
+                  <EmptySpace min="-2" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" attributes="0">
+                          <EmptySpace min="5" pref="5" max="-2" attributes="0"/>
+                          <Component id="Read_Label" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <Component id="Read_ComboBox" min="-2" max="-2" attributes="0"/>
+                      <Component id="ReadDirectoryBrowse_Button" alignment="0" min="-2" pref="27" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace min="-2" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="Write_Label" min="-2" max="-2" attributes="0"/>
+                      <Component id="Write_ComboBox" min="-2" max="-2" attributes="0"/>
+                      <Component id="WriteDirectoryBrowse_Button" alignment="0" min="-2" pref="27" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace min="-2" max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Component class="javax.swing.JLabel" name="Read_Label">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Read Directory"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JComboBox" name="Read_ComboBox">
+          <Properties>
+            <Property name="editable" type="boolean" value="true"/>
+            <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+              <Connection code="new javax.swing.DefaultComboBoxModel&lt;&gt;(ReadOptions)" type="code"/>
+            </Property>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Read_ComboBoxActionPerformed"/>
+          </Events>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_SerializeTo" type="java.lang.String" value="IndexFrame_Read_ComboBox"/>
+            <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+          </AuxValues>
+        </Component>
+        <Component class="javax.swing.JButton" name="WriteDirectoryBrowse_Button">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Browse"/>
+          </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="WriteDirectoryBrowse_ButtonMouseClicked"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="ReadDirectoryBrowse_Button">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Browse"/>
+          </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="ReadDirectoryBrowse_ButtonMouseClicked"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JLabel" name="Write_Label">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Write Directory"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JComboBox" name="Write_ComboBox">
+          <Properties>
+            <Property name="editable" type="boolean" value="true"/>
+            <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+              <Connection code="new javax.swing.DefaultComboBoxModel&lt;&gt;(WriteOptions)" type="code"/>
+            </Property>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Write_ComboBoxActionPerformed"/>
+          </Events>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+          </AuxValues>
+        </Component>
+      </SubComponents>
+    </Container>
+    <Container class="javax.swing.JPanel" name="Mod_Panel">
+      <Properties>
+        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+          <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
+            <TitledBorder title="Modifications">
+              <Color PropertyName="color" blue="ab" green="ab" red="b6" type="rgb"/>
+            </TitledBorder>
+          </Border>
+        </Property>
+      </Properties>
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace min="-2" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="Corner_Label" min="-2" pref="69" max="-2" attributes="0"/>
+                      <Component id="Grid_Label" pref="75" max="32767" attributes="0"/>
+                  </Group>
+                  <EmptySpace min="-2" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" attributes="0">
+                          <Component id="Grid_Spinner" min="-2" pref="54" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="Pixel_Label" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace pref="48" max="32767" attributes="0"/>
+                      </Group>
+                      <Group type="102" attributes="0">
+                          <Component id="Corner_ComboBox" max="32767" attributes="0"/>
+                          <EmptySpace min="-2" pref="48" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <Component id="Column_TextField" min="-2" pref="65" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="Column_Label" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <Component id="Row_TextField" min="-2" pref="65" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="Row_Label" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <EmptySpace min="-2" max="-2" attributes="0"/>
+                  <Component id="Direction_Label" min="-2" pref="72" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="5" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="Direction_Vertical_Radio" linkSize="2" min="-2" pref="82" max="-2" attributes="0"/>
+                      <Component id="Direction_Horizontal_Radio" linkSize="2" min="-2" pref="101" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="1" attributes="0">
+                  <EmptySpace pref="14" max="32767" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="Corner_Label" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="Corner_ComboBox" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="Row_Label" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="Direction_Label" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="Direction_Vertical_Radio" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="Row_TextField" linkSize="3" alignment="3" min="-2" pref="36" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="1" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="Column_TextField" linkSize="3" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="Column_Label" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" attributes="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" attributes="0">
+                                  <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="Grid_Label" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="Grid_Spinner" linkSize="3" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="Pixel_Label" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="Direction_Horizontal_Radio" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <EmptySpace min="-2" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Component class="javax.swing.JLabel" name="Corner_Label">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Corner"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JComboBox" name="Corner_ComboBox">
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Corner_ComboBoxActionPerformed"/>
+          </Events>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new javax.swing.JComboBox&lt;String&gt;(cornerNames)"/>
+            <AuxValue name="JavaCodeGenerator_CreateCodePre" type="java.lang.String" value="ImageCellRenderer renderer = new ImageCellRenderer(mapImages);"/>
+            <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="Corner_ComboBox.setRenderer(renderer);&#xa;Corner_ComboBox.setSelectedItem(&quot;UpperRight&quot;);&#xa;Corner = (PrintCorner) inverseMapWord.get(Corner_ComboBox.getSelectedItem());"/>
+            <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+          </AuxValues>
+        </Component>
+        <Component class="javax.swing.JLabel" name="Grid_Label">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Grid"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JSpinner" name="Grid_Spinner">
+          <Properties>
+            <Property name="model" type="javax.swing.SpinnerModel" editor="org.netbeans.modules.form.editors2.SpinnerModelEditor">
+              <SpinnerModel initial="0" minimum="0" numberType="java.lang.Long" stepSize="1" type="number"/>
+            </Property>
+          </Properties>
+          <Events>
+            <EventHandler event="stateChanged" listener="javax.swing.event.ChangeListener" parameters="javax.swing.event.ChangeEvent" handler="Grid_SpinnerStateChanged"/>
+          </Events>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="JSpinner.NumberEditor jsEditor = (JSpinner.NumberEditor) Grid_Spinner.getEditor();&#xa;&#xa;JFormattedTextField Grid_Spinner_TextEditor = jsEditor.getTextField();&#xa;&#xa;NumberFormat format = NumberFormat.getNumberInstance();&#xa;&#xa;DocumentFilter Grid_filter = new IntFilter();&#xa;&#xa;Grid_Spinner_TextEditor.setFormatterFactory(new DefaultFormatterFactory(&#xa;    new InternationalFormatter(format){&#xa;        @Override&#xa;        protected DocumentFilter getDocumentFilter(){&#xa;            return Grid_filter;&#xa;        }&#xa;    }));&#xa;&#xa;Grid = Grid_Spinner.getModel().getValue() != null ? (int) (long) Grid_Spinner.getModel().getValue() : 0;"/>
+          </AuxValues>
+        </Component>
+        <Component class="javax.swing.JLabel" name="Pixel_Label">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Pixels"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="Direction_Label">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Direction"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JRadioButton" name="Direction_Vertical_Radio">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Vertical"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Direction_Vertical_RadioActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JRadioButton" name="Direction_Horizontal_Radio">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Horizontal"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Direction_Horizontal_RadioActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JLabel" name="Row_Label">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Row"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="Column_Label">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Column"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="Row_TextField">
+          <Properties>
+            <Property name="toolTipText" type="java.lang.String" value=""/>
+            <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+              <Color id="Text Cursor"/>
+            </Property>
+          </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="PlainDocument Row_doc = (PlainDocument) Row_TextField.getDocument();"/>
+            <AuxValue name="JavaCodeGenerator_ListenersCodePost" type="java.lang.String" value="Row_TextField.getDocument().addDocumentListener(new DocumentListener(){&#xa;    public void changedUpdate(DocumentEvent evt) {&#xa;        Row_TextFieldDocumentChangedUpdate(evt);&#xa;    }&#xa;    public void removeUpdate(DocumentEvent evt) {&#xa;        Row_TextFieldDocumentRemoveUpdate(evt);&#xa;    }&#xa;    public void insertUpdate(DocumentEvent evt) {&#xa;        Row_TextFieldDocumentInsertUpdate(evt);&#xa;    }&#xa;});&#xa;Row_TextField.setText(&quot;3&quot;);&#xa;Row_doc.setDocumentFilter(new IntFilter());&#xa;Row = Integer.parseInt(Row_TextField.getText());"/>
+          </AuxValues>
+        </Component>
+        <Component class="javax.swing.JTextField" name="Column_TextField">
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="Column_TextField.getDocument().addDocumentListener(new DocumentListener(){&#xa;    public void changedUpdate(DocumentEvent evt) {&#xa;        Column_TextFieldDocumentChangedUpdate(evt);&#xa;    }&#xa;    public void removeUpdate(DocumentEvent evt) {&#xa;        Column_TextFieldDocumentRemoveUpdate(evt);&#xa;    }&#xa;    public void insertUpdate(DocumentEvent evt) {&#xa;        Column_TextFieldDocumentInsertUpdate(evt);&#xa;    }&#xa;});&#xa;Column_TextField.setText(&quot;3&quot;);&#xa;Col_doc.setDocumentFilter(new IntFilter());&#xa;Column = Integer.parseInt(Column_TextField.getText());"/>
+            <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="PlainDocument Col_doc = (PlainDocument) Column_TextField.getDocument();"/>
+          </AuxValues>
+        </Component>
+      </SubComponents>
+    </Container>
+    <Component class="javax.swing.JButton" name="Confirm_Button">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Merge"/>
+      </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="Confirm_ButtonMouseClicked"/>
+      </Events>
+    </Component>
+  </SubComponents>
+</Form>
