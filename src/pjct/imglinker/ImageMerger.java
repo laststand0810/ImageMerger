@@ -5,8 +5,6 @@
  */
 package pjct.imglinker;
 
-import GUI.IndexFrame;
-import java.awt.Color;
 import java.awt.Graphics2D;
 import java.awt.Image;
 import java.awt.image.BufferedImage;
@@ -58,7 +56,8 @@ public class ImageMerger extends pjct.imglinker.AbstractGUIFormReceiver {
         return dimg;
     }
 
-    public static BufferedImage concatImage(int col, int row, int grid, ArrayList<BufferedImage> images, String corner, String direction) {
+    public static BufferedImage concatImage(int col, int row, int grid, String readDirectory, String corner, String direction) throws IOException {
+        ArrayList<BufferedImage> images = listImgFilesFromFolder(new File(readDirectory));
         int height = images.get(0).getHeight(), width = images.get(0).getWidth();
         BufferedImage dimg = new BufferedImage((width+grid)*col + grid, (height+grid) * row + grid, BufferedImage.TYPE_INT_RGB);
         Graphics2D g2d = dimg.createGraphics();
@@ -123,14 +122,18 @@ public class ImageMerger extends pjct.imglinker.AbstractGUIFormReceiver {
         File output = new File(location + "/result_" + counter + ".jpg");
         ImageIO.write(image, "jpg", output);
     }
+    
+    public static void concatAll(int col, int row, int grid, String readDirectory, String corner, String direction){
+        
+    }
 
     @Override
     public void operate() {
         try {
+            
             BufferedImage img = concatImage((int) super.getData().get("Column"), 
                     (int) super.getData().get("Row"), (int) super.getData().get("Grid"),
-                    listImgFilesFromFolder(new File((String) 
-                            super.getData().get("ReadDirectory"))), super.getData().get("Corner").toString(), 
+                    (String) super.getData().get("ReadDirectory"), super.getData().get("Corner").toString(), 
                             super.getData().get("Direction").toString());
             saveImageJPG(img, (String) super.getData().get("WriteDirectory"));
         } catch (IOException ex) {
